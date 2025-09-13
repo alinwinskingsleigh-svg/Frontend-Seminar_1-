@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="reset.css" rel="stylesheet" />
-    <title>Document</title>
-  </head>
-  <body></body>
-  <script src="index.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>임효리 · 자기소개</title>
+  <meta name="description" content="임효리의 자기소개 페이지" />
+  <link rel="stylesheet" href="./reset.css" />
+  <style>
+    /* === 아주 간단한 스타일 (다크/라이트 지원) === */
+    :root{
+      --bg:#0f1115; --text:#e7ebf3; --muted:#9aa3b2; --card:#151823; --brand:#7aa2ff;
+    }
+    body.light{
+      --bg:#f7f8fb; --text:#16181d; --muted:#606574; --card:#ffffff; --brand:#3a66ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Noto Sans KR, sans-serif;
+      line-height:1.6;
+    }
+    .wrap{max-width:860px; margin:0 auto; padding:24px}
+    header{position:sticky; top:0; background:rgba(0,0,0,.2); backdrop-filter:blur(6px)}
+    nav{display:flex; justify-content:space-between; align-items:center; padding:12px 0}
+    h1{margin:8px 0 0; font-size:28px}
+    .muted{color:var(--muted)}
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:16px; margin-top:16px}
+    .btn{cursor:pointer; padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.18); background:transparent; color:var(--text)}
+    a{color:var(--brand); text-decoration:none}
+    ul{padding-left:18px; margin:8px 0}
+    footer{margin:28px 0; color:var(--muted); font-size:14px; text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <strong>Intro</strong>
+        <button id="themeBtn" class="btn">☀️ 라이트모드</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h1>안녕하세요, 임효리입니다 👋</h1>
+      <p class="muted">서울대학교 종교학과 · 프론트엔드/백엔드(React / FastAPI) 공부 중</p>
+      <p>사용자 경험 흐름을 설계하고, 루틴/학습을 돕는 서비스를 만드는 데 관심이 있어요.</p>
+    </section>
+
+    <section class="card">
+      <h2>관심사</h2>
+      <ul>
+        <li>프론트엔드(React) 입문</li>
+        <li>FastAPI로 간단한 백엔드 만들기</li>
+        <li>학습 루틴/체크리스트 도구</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>연락</h2>
+      <p>이메일: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </section>
+
+    <footer>© <span id="year"></span> 임효리</footer>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
 </html>
